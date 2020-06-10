@@ -1,0 +1,8 @@
+.menus-item {
+  padding: 15px;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+}

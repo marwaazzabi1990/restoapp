@@ -1,0 +1,41 @@
+.nav-bar {
+  background-image: linear-gradient(to right, black, gray);
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80px;
+  box-shadow: 0px 5px 2px 1px rgba(0, 0, 255, 0.2);
+}
+.inscription {
+  margin-top: 30px;
+}
+.logo {
+  border-radius: 20px;
+  width: 100px;
+  height: 70px;
+}
+.nav-listes {
+  display: flex;
+  list-style: none;
+
+  justify-content: space-between;
+  text-decoration: none;
+}
+a {
+  color: white;
+  padding-left: 10px;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}
+.icone {
+  font-family: fantasy;
+  font-size: 300%;
+  color: red;
+  text-shadow: 2px 2px #ff0000;
+}
+.logo {
+  height: 90px;
+}

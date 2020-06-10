@@ -1,0 +1,44 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "img": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.cuisineaz.com%2F610x610%2F2016-04-28%2Fi68325-couscous-et-sa-sauce.jpg&imgrefurl=https%3A%2F%2Fwww.cuisineaz.com%2Frecettes%2Fcouscous-et-sa-sauce-1858.aspx&tbnid=B1lWeEse4EH7fM&vet=12ahUKEwjrsNy3-fHpAhUPD-wKHdGjAYEQMygAegUIARDIAQ..i&docid=8RHgtb5B63ZFkM&w=610&h=610&q=image%20couscous&ved=2ahUKEwjrsNy3-fHpAhUPD-wKHdGjAYEQMygAegUIARDIAQ",
+      "title": "couscous",
+      "prix": "10000"
+    },
+    {
+      "id": 2,
+      "img": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.cuisineaz.com%2F610x610%2F2016-04-28%2Fi68325-couscous-et-sa-sauce.jpg&imgrefurl=https%3A%2F%2Fwww.cuisineaz.com%2Frecettes%2Fcouscous-et-sa-sauce-1858.aspx&tbnid=B1lWeEse4EH7fM&vet=12ahUKEwjrsNy3-fHpAhUPD-wKHdGjAYEQMygAegUIARDIAQ..i&docid=8RHgtb5B63ZFkM&w=610&h=610&q=image%20couscous&ved=2ahUKEwjrsNy3-fHpAhUPD-wKHdGjAYEQMygAegUIARDIAQ",
+      "title": "salade",
+      "prix": "5000"
+    },
+    {
+      "id": 3,
+      "img": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.cuisineaz.com%2F610x610%2F2016-04-28%2Fi68325-couscous-et-sa-sauce.jpg&imgrefurl=https%3A%2F%2Fwww.cuisineaz.com%2Frecettes%2Fcouscous-et-sa-sauce-1858.aspx&tbnid=B1lWeEse4EH7fM&vet=12ahUKEwjrsNy3-fHpAhUPD-wKHdGjAYEQMygAegUIARDIAQ..i&docid=8RHgtb5B63ZFkM&w=610&h=610&q=image%20couscous&ved=2ahUKEwjrsNy3-fHpAhUPD-wKHdGjAYEQMygAegUIARDIAQ",
+      "title": "soupe",
+      "prix": "5000"
+    },
+    {
+      "title": "s7an tounsi",
+      "img": "hhh",
+      "prix": "7890",
+      "id": 4
+    },
+    {
+      "title": "kkk",
+      "img": "kkk",
+      "prix": "lll",
+      "id": 5
+    }
+  ],
+  "commande": [
+    {
+      "platid": 1,
+      "nom_plat": "soupe",
+      "total": "10000"
+    }
+  ],
+  "user": {
+    "name": "typicode"
+  }
+}
