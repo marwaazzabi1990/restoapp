@@ -2,7 +2,7 @@
   "menu": [
     {
       "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
-      "prix": "30000",
+      "prix": 30000,
       "title": "GATEAUX",
       "id": 1
     },
@@ -10,18 +10,18 @@
       "id": 2,
       "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
       "title": "salade",
-      "prix": "5000"
+      "prix": 5000
     },
     {
       "id": 3,
       "img": "https://image.freepik.com/photos-gratuite/soupe-tomate-au-vert-table_140725-2447.jpg",
       "title": "soupe",
-      "prix": "5000"
+      "prix": 5000
     },
     {
       "title": "s7an toinsi",
       "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
-      "prix": "98756",
+      "prix": 98756,
       "id": 4
     }
   ],
@@ -29,7 +29,80 @@
     {
       "platid": 1,
       "nom_plat": "soupe",
-      "total": "10000"
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "prix": 10000
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "prix": 30000,
+      "nom_plat": "GATEAUX",
+      "platid": 1
+    },
+    {
+      "platid": 2,
+      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
+      "nom_plat": "salade",
+      "prix": 5000
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "prix": 30000,
+      "title": "GATEAUX",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
+      "title": "salade",
+      "prix": 5000
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "nom_plat": "GATEAUX",
+      "prix": 30000,
+      "id": 3
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
+      "nom_plat": "salade",
+      "prix": 5000,
+      "id": 4
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "nom_plat": "GATEAUX",
+      "prix": 30000,
+      "id": 5
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
+      "nom_plat": "salade",
+      "prix": 5000,
+      "id": 6
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/soupe-tomate-au-vert-table_140725-2447.jpg",
+      "nom_plat": "soupe",
+      "prix": 5000,
+      "id": 7
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "nom_plat": "GATEAUX",
+      "prix": 30000,
+      "id": 8
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
+      "nom_plat": "salade",
+      "prix": 5000,
+      "id": 9
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/soupe-tomate-au-vert-table_140725-2447.jpg",
+      "nom_plat": "soupe",
+      "prix": 5000,
+      "id": 10
     }
   ],
   "user": {
