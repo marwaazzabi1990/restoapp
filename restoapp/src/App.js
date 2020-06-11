@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import MenusContainer from "./components/menusContainer";
 import Navbar from "./components/navbar/navbar";
-import EdithItem from "./components/edithItem";
+import CommandeContainer from "./components/commandecontainer";
 import ss from "./store.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -18,8 +18,14 @@ function App() {
             <Navbar />
             <MenusContainer />
           </Route >
-          <Route exact path="/edit" >
-            <EdithItem />
+
+          <Route exact path="/commande" >
+            <Navbar />
+            <CommandeContainer />
+          </Route>
+          <Route exact path="/commande" >
+            <Navbar />
+            <CommandeContainer />
           </Route>
         </Switch>
       </Router>

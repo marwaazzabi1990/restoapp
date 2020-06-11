@@ -1,5 +1,6 @@
-import { ADD_MENUS, DELETE_MENUS, GET_ALL_MENUS } from "./types";
+import { ADD_MENUS, DELETE_MENUS, GET_ALL_MENUS, MODIF_MENUS } from "./types";
 import Axios from "axios";
+
 /* get all PLAT */
 
 export const getAllPlats = (payload) => ({
@@ -25,6 +26,23 @@ export function addmenuToApi(data) {
       dispatch(addMenu(data))
     );
 }
+/*modif menu*/
+export const ModifierPlat = (payload) => ({
+  type: MODIF_MENUS,
+  payload,
+});
+export function ModifierPlats(data) {
+  let id = data.id
+  let a = data.img
+  let b = data.prix
+  let c = data.title
+  return (dispatch) =>
+    Axios.put(`http://localhost:3004/menu/${data.id}`, { img: a, prix: b, title: c }).then((res) => {
+      dispatch(ModifierPlat(res.data));
+      window.location.reload(false);
+    });
+}
+
 
 /*delette menu */
 

@@ -8,12 +8,18 @@ import {
 import EdithItem from "./edithItem";
 import { addcmdFromApi } from "../actions/CommandeAction";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { MDBCard, MDBCardTitle, MDBBtn, MDBCardGroup, MDBCardImage, MDBCardText, MDBCardBody, MDBCol } from "mdbreact";
+import ModalPage from "../components/ModalPageAjout"
+import ModalPageModif from "../components/ModalPageModif"
+//import { Button, ButtonToolbar } from "react-bootstrap";
+
 
 import "./menucontain.css";
 
 export class MenusContainer extends Component {
   state = {
     item: [],
+    addModelShow: false,
   };
 
   /*addtocmd = (e) => {
@@ -49,65 +55,49 @@ export class MenusContainer extends Component {
     this.props.getAllPlats();
   }
   render() {
-    console.log(this.state.item);
+    //console.log(this.state.item);
     const { menus } = this.props;
-    console.log(menus);
+   // console.log(menus);
 
     return (
-      <div className="menus-item">
-        <div>
+      //  let addModelClose = () => this.setState({ addModelShow: false });
+      <div >
+
+
+        <ModalPage
+          title={this.title}
+          price={this.price}
+          image={this.image}
+
+        />
+
+
+
+        <div className="menus-item">
           {menus.map((el, i) => (
-            <div>
-              <span>
-                <span className="colored">{el.id}</span>{" "}
-              </span>
-              <span>
-                <img src={el.img}></img>
-              </span>{" "}
-              <span>
-                <span className="colored">{el.title}</span>
-              </span>
-              <span>
-                <span className="colored">{el.prix}</span>
-              </span>
-              <Link to='edit' el={el}>
-                <button onClick={() => this.edither(el)}>Editer</button>
-              </Link>
-              
-              <button onClick={() => this.props.addcmd(el)}>Commander</button>
-              <button onClick={() => this.props.deleteMenu(el.id)}>
-                Supprimer{" "}
-              </button>
+            <div >
+
+              <MDBCol className="dispo" style={{ maxWidth: "22rem" }}>
+                <MDBCard>
+                  <MDBCardImage className="img-card-menu" src={el.img}
+                    waves />
+                  <MDBCardBody>
+                    <MDBCardTitle>{el.title}</MDBCardTitle>
+                    <MDBCardText>{el.prix}</MDBCardText>
+                    < ModalPageModif el={el} />
+                    <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(el)}> Commender</MDBBtn>
+
+                    <MDBBtn className="btn-red" onClick={() => this.props.deleteMenu(el.id)}><i class="fas fa-trash"></i>   Supprimer</MDBBtn>
+                  </MDBCardBody>
+                </MDBCard>
+              </MDBCol>
             </div>
 
-            /*  <MenuItem
-            key={i}
-            menuData={el}
-            state={this.state}
-            addtocmd={this.addtocmd({id:el.id,
-              title:el.title,
-              price: el.price.el.price})}
-          />*/
           ))}
         </div>
-        <div>
-          <input type="text" name="title" onChange={this.title}></input>
-          <label>prix</label>
-          <input type="text" name="prix" onChange={this.price}></input>
-          <label>image</label>
-          <input type="text" name="img" onChange={this.image}></input>
-          <button
-            onClick={() =>
-              this.props.addMenu({
-                title: this.state.title,
-                img: this.state.img,
-                prix: this.state.prix,
-              })
-            }
-          >
-            ajouter plat
-          </button>
-        </div>
+
+
+
       </div>
     );
   }

@@ -8,9 +8,23 @@ export const commander = (payload) => ({
   payload,
 });
 
-export function addcmdFromApi() {
-  return (dispatch) =>
+export function addcmdFromApi(data) {
+  return (dispatch) => {
+    alert("ajouter au commande")
     Axios.post("http://localhost:3004/commande").then((res) =>
       dispatch(commander(res.data))
+    );
+  }
+}
+/***************get commande */
+export const getAllCommande = (payload) => ({
+  type: GET_ALL_COMMANDE,
+  payload,
+});
+
+export function getCommandeFromApi() {
+  return (dispatch) =>
+    Axios.get("http://localhost:3004/commande").then((res) =>
+      dispatch(getAllCommande(res.data))
     );
 }

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const listes = [
   { name: "Menu", link: "/" },
   { name: "commande", link: "/commande" },
+  { name: "user", link: "/user" },
   { name: "Sing In", link: "register" },
   { name: "Sigin", link: "login" },
 ];
