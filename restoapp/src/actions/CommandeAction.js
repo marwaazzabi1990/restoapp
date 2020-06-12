@@ -22,16 +22,25 @@ export function addcmdFromApi(data) {
 
   return (dispatch) => {
     alert("ajouter au commande")
+
     Axios.post(`http://localhost:3004/commande`, { img: a, nom_plat: c, prix: b }).then((res) => {
       dispatch(commander(data))
 
       somme = somme + data.prix
       count = count + 1
-      console.log(count)
+      console.log(data)
 
-    }
+    })
+    console.log(count)
+    Axios.post('http://localhost:3004/total', {
+      totalcommande: somme, qte: count
+    }).then((res) => {
+      console.log(res.data)
 
-    );
+    })
+
+
+
   }
 }
 /***************get commande */

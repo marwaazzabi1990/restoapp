@@ -90,10 +90,12 @@ export class CommandeContainer extends Component {
 
 const mapStateToProps = (state) => ({
     commande: state.commande,
+    totalCommande: state.totalCommande
 });
 
 const mapDispatchToProps = (dispatch) => ({
     getAllCommande: () => dispatch(getCommandeFromApi()),
+    getALLtotalCommande: () => dispatch(getCommandeFromApi())
 
 });
 

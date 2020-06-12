@@ -3,14 +3,14 @@
     {
       "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
       "prix": 30000,
-      "title": "GATEAUX",
+      "title": "sapagatti",
       "id": 1
     },
     {
-      "id": 2,
       "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
-      "title": "salade",
-      "prix": 5000
+      "prix": "1000",
+      "title": "salade de riz",
+      "id": 2
     },
     {
       "id": 3,
@@ -103,6 +103,59 @@
       "nom_plat": "soupe",
       "prix": 5000,
       "id": 10
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
+      "nom_plat": "s7an toinsi",
+      "prix": 98756,
+      "id": 11
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
+      "nom_plat": "salade",
+      "prix": 5000,
+      "id": 12
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "nom_plat": "GATEAUX",
+      "prix": 30000,
+      "id": 13
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "nom_plat": "GATEAUX",
+      "prix": 30000,
+      "id": 14
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "nom_plat": "GATEAUX",
+      "prix": 30000,
+      "id": 15
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
+      "nom_plat": "GATEAUX",
+      "prix": 30000,
+      "id": 16
+    }
+  ],
+  "total": [
+    {
+      "id": 1,
+      "total-commande": 0,
+      "qte": 0
+    },
+    {
+      "totalcommande": 0,
+      "qte": 0,
+      "id": 2
+    },
+    {
+      "totalcommande": 30000,
+      "qte": 1,
+      "id": 3
     }
   ],
   "user": {

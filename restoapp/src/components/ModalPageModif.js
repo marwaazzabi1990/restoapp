@@ -12,22 +12,14 @@ import "./ModalPage.css"
 
 class ModalPage extends Component {
     state = {
-
         id: this.props.el.id,
-
+        title: this.props.el.title,
+        prix: this.props.el.prix,
+        img: this.props.el.img,
         item: [],
         addModelShow: false,
 
     }
-    title = (e) => {
-        this.setState({ title: e.target.value });
-    };
-    price = (e) => {
-        this.setState({ prix: e.target.value });
-    };
-    image = (e) => {
-        this.setState({ img: e.target.value });
-    };
 
     toggle = nr => () => {
         let modalNumber = 'modal' + nr
@@ -48,28 +40,28 @@ class ModalPage extends Component {
                     <MDBModalBody>
                         <form>
 
-                            <label>{this.props.el.title}</label>
-                            <input type="text" name="title" onChange={this.title}></input>
-                            <label>{this.props.el.prix}</label>
-                            <input type="text" name="prix" onChange={this.price}></input>
-                            <label>{this.props.el.prix}</label>
-                            <input type="text" name="img" onChange={this.image}></input>
+                            <label></label>
+                            <input type="text" name="title" defaultValue={this.props.el.title} onChange={(e) => this.setState({ title: e.target.value })} ></input>
+
+                            <input type="text" name="prix" defaultValue={this.props.el.prix} onChange={(e) => this.setState({ prix: e.target.value })}></input>
+
+                            <input type="text" defaultValue={this.props.el.img} name="img" onChange={(e) => this.setState({ img: e.target.value })}></input>
                             <h1>{this.props.el.id}</h1>
                         </form>
                     </MDBModalBody>
                     <MDBModalFooter>
                         <MDBBtn color="secondary" onClick={this.toggle(8)}>Close</MDBBtn>
                         <MDBBtn color="primary" classname="primary" onClick={() =>
-                         
+
                             this.props.adModifierPlatdMenu({
                                 id: this.state.id,
                                 title: this.state.title,
                                 img: this.state.img,
                                 prix: this.state.prix,
-                            })} > Save changes</MDBBtn>
+                            })} >Enrigistrer</MDBBtn>
                     </MDBModalFooter>
                 </MDBModal>
-            </MDBContainer>
+            </MDBContainer >
         );
     }
 }
