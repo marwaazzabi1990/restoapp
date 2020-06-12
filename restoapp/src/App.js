@@ -15,7 +15,7 @@ function App() {
 
       <Router>
         <Switch>
-          <Route exact path="/containeclient">
+          <Route exact path="/">
             <Navbar />
             <MenusContainClient />
           </Route >

@@ -1,0 +1,17 @@
+"commande": [
+    {
+      "list_plats": [
+        {
+          "id": 2,
+          "qte": 12
+        },
+        {
+          "id": 2,
+          "qte": 12
+        }
+      ],
+      "prixtotal": 5000,
+
+      "id": 1
+    }
+  ],
