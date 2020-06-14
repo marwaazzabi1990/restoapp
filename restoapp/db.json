@@ -58,14 +58,30 @@
       "id": 1
     }
   ],
-  "user":[ {
-    "name": "marwaazzabi@gmail.com",
-    "password":123,
-    "role":"user"
-  }
-  {
-  "name": "zf@gmail.com",
-  "password":123,
-  "role":"admin"
+  "user": [
+    {
+      "first_name": "marwa",
+      "last_name": "azzabi",
+      "password": "123456",
+      "email": "marwa@gmail.com",
+      "image": "https://semantic-ui.com/images/avatar2/large/ely",
+      "id": 1
+    },
+    {
+      "first_name": "maram",
+      "last_name": "faous",
+      "password": "123456789",
+      "email": "maram@gmail.com",
+      "image": "https://assets.afcdn.com/story/20171206/1137982_w980h638c1cx202cy281.jpg",
+      "id": 2
+    },
+    {
+      "first_name": "aya",
+      "last_name": "chadi",
+      "password": "987456321",
+      "email": "aya@gmail.com",
+      "image": "https://assets.afcdn.com/story/20171206/1137982_w980h638c1cx202cy281.jpg",
+      "id": 3
+    }
+  ]
 }
-  ]}

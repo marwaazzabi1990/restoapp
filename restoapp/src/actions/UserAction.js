@@ -7,7 +7,7 @@ export const getAllUser = (payload) => ({
   payload,
 });
 
-export function getUserFromApi() {
+export function getusersFromApi() {
   return (dispatch) =>
     Axios.get("http://localhost:3004/user").then((res) =>
       dispatch(getAllUser(res.data))
@@ -26,7 +26,7 @@ export function commanderPlatsFromApi() {
     );
 }*/
 /* add  USER */
-export const ADD_USER = (payload) => ({
+/*export const ADD_USER = (payload) => ({
   type: ADD_USER,
   payload,
 });

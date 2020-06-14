@@ -11,8 +11,8 @@ const listes = [
   { name: " client", link: "/containeclient" },
   { name: " admin", link: "/containeadmin" },
   { name: "user", link: "/user" },
-  { name: "Sing In", link: "register" },
-  { name: "Sigin", link: "login" },
+  { name: "Sing In", link: "/signup" },
+  { name: "log", link: "/login" },
 ];
 
 function Navbar(props) {

@@ -4,7 +4,8 @@ import MenusContainer from "./components/menusContainer";
 import Navbar from "./components/navbar/navbar";
 import CommandeContainer from "./components/commandecontainer";
 import MenusContainClient from "./components/menucontainclient"
-import SingIn from "./components/singin"
+import Signup from "./components/singin"
+import Log from "./components/login"
 import ss from "./store.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -16,11 +17,16 @@ function App() {
 
       <Router>
         <Switch>
-          <Route exact path="/">
+
+          <Route exact path="/signup">
             <Navbar />
-            <SingIn />
+            <Signup />
           </Route >
-          <Route exact path="/containeadmin">
+          <Route exact path="/login">
+            <Navbar />
+            <Log />
+          </Route >
+          <Route exact path="/">
             <Navbar />
             <MenusContainClient />
           </Route >
