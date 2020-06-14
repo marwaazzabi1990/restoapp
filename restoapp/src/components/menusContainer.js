@@ -57,7 +57,7 @@ export class MenusContainer extends Component {
   render() {
     //console.log(this.state.item);
     const { menus } = this.props;
-   // console.log(menus);
+    // console.log(menus);
 
     return (
       //  let addModelClose = () => this.setState({ addModelShow: false });
@@ -85,7 +85,7 @@ export class MenusContainer extends Component {
                     <MDBCardTitle>{el.title}</MDBCardTitle>
                     <MDBCardText>{el.prix}</MDBCardText>
                     < ModalPageModif el={el} />
-                    <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(el)}> Commender</MDBBtn>
+                    <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(el)}> Commander</MDBBtn>
 
                     <MDBBtn className="btn-red" onClick={() => this.props.deleteMenu(el.id)}><i class="fas fa-trash"></i>   Supprimer</MDBBtn>
                   </MDBCardBody>

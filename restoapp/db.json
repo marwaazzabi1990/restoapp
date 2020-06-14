@@ -2,57 +2,61 @@
   "menu": [
     {
       "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
-      "prix": "10",
+      "prix": "987",
       "title": "GATEAUX",
+      "qte": 1,
       "id": 1
     },
     {
       "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
       "prix": "20",
       "title": "salade",
+      "qte": 1,
       "id": 2
     },
     {
       "img": "https://image.freepik.com/photos-gratuite/soupe-tomate-au-vert-table_140725-2447.jpg",
       "prix": "30",
       "title": "soupe",
+      "qte": 1,
       "id": 3
     },
     {
       "img": "https://www.onamangepourvous.tn/wp-content/uploads/2018/02/6-1.jpg",
       "prix": "40",
       "title": "s7an toinsi",
+      "qte": "1",
       "id": 4
     }
   ],
   "commande": [
     {
-      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
-      "nom_plat": "GATEAUX",
-      "prix": "10",
-      "qte": 0,
-      "id": 1
-    },
-    {
       "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
       "nom_plat": "salade",
       "prix": "20",
-      "qte": 0,
-      "id": 2
+      "qte": 1,
+      "id": 1
     },
     {
       "img": "https://image.freepik.com/photos-gratuite/soupe-tomate-au-vert-table_140725-2447.jpg",
       "nom_plat": "soupe",
       "prix": "30",
-      "qte": 0,
+      "qte": 1,
+      "id": 2
+    },
+    {
+      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
+      "nom_plat": "salade",
+      "prix": "20",
+      "qte": 1,
       "id": 3
     }
   ],
   "order": [
     {
-      "somme": 36.519999999999996,
+      "somme": 70,
       "nombrearticle": 3,
-      "date": "Sun Jun 07 2020 13:01:04 ",
+      "date": "Sun Jun 14 2020 02:18:38 ",
       "id": 1
     }
   ],

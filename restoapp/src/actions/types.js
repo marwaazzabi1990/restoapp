@@ -11,5 +11,6 @@ export const GET_ALL_USER = "GET_ALL_USER";
 export const ADD_COMMANDE = "ADD_COMMANDE";
 export const DELETE_COMMANDE = "DELETE_COMMANDE";
 export const GET_ALL_COMMANDE = "GET_ALL_COMMANDE";
+export const VALIDCMD = "VALIDCMD"
 /***************TOTAL******************** */
 export const GEt_ALL_TOTAL = "GEt_ALL_TOTAL";

@@ -1,6 +1,22 @@
-import { ADD_COMMANDE, DELETE_COMMANDE, GET_ALL_COMMANDE, GEt_ALL_TOTAL } from "./types";
+import { ADD_COMMANDE, DELETE_COMMANDE, GET_ALL_COMMANDE, GEt_ALL_TOTAL, VALIDCMD } from "./types";
 import Axios from "axios";
 
+/*******VALID QTE */
+export const validcmd = (payload) => ({
+  type: VALIDCMD,
+  payload
+})
+export function vlidcmdFromApi(data) {
+  let id = data.id
+  let somme = data.somme
+  let nombrearticle = data.nombrearticle
+
+  return (dispatch) =>
+    Axios.post(`http://localhost:3004/order/`, { somme: somme, nombrearticle: nombrearticle }).then((res) => {
+      dispatch(validcmd(res.data));
+      window.location.reload(false);
+    });
+}
 
 
 
@@ -19,7 +35,7 @@ export function addcmdFromApi(data) {
   let a = data.img
   let b = data.prix
   let c = data.title
-  let qte = 0
+  let qte = data.qte
 
   /******* */
 

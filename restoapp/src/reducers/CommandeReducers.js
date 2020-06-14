@@ -20,5 +20,6 @@ export default function CommandeReducer(state = initialState, action) {
     return action.payload;
 
   }
+
   return state;
 }

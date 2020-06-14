@@ -19,6 +19,9 @@ import "./menucontain.css";
 export class MenusContainerClient extends Component {
     state = {
         item: [],
+        title: "",
+        prix: "",
+        qte: 0,
         addModelShow: false,
     };
 
@@ -39,8 +42,9 @@ export class MenusContainerClient extends Component {
   
       //console.log(this.state.food.title);
     };*/
-    title = (e) => {
-        this.setState({ title: e.target.value });
+    quatite = (e) => {
+        this.setState({ qte: e.target.value });
+        var qte = this.state.qte
     };
     price = (e) => {
         this.setState({ prix: e.target.value });
@@ -78,10 +82,15 @@ export class MenusContainerClient extends Component {
                                     <MDBCardImage className="img-card-menu" src={el.img}
                                         waves />
                                     <MDBCardBody>
-                                        <MDBCardTitle>{el.title}</MDBCardTitle>
+                                        <MDBCardTitle > {el.title}</MDBCardTitle>
                                         <MDBCardText>{el.prix}</MDBCardText>
 
-                                        <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(el)}> Commender</MDBBtn>
+                                        <MDBBtn className="btn-blue" onClick={this.increment}> +</MDBBtn>
+                                        <input type="text" defaultValue="1" onChange={this.quatite}  ></input>
+                                        <MDBBtn className="btn-blue" onClick={this.dicrement} > -</MDBBtn>
+
+
+                                        <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(el)}> Commander</MDBBtn>
 
                                     </MDBCardBody>
                                 </MDBCard>

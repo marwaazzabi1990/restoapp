@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
     getCommandeFromApi
+    , vlidcmdFromApi
 } from "../actions/CommandeAction";
 import EdithItem from "./edithItem";
 import { addcmdFromApi } from "../actions/CommandeAction";
@@ -10,10 +11,13 @@ import { MDBCard, MDBCardTitle, MDBBtn, MDBCardGroup, MDBCardImage, MDBCardText,
 //import ModalPage from "../components/ModalPageAjout"
 //import ModalPageModif from "../components/ModalPageModif"
 //import { Button, ButtonToolbar } from "react-bootstrap";
+import "./commandecontainer.css"
+import Axios from "axios";
 
 
 import "./menucontain.css";
-
+var somme = 0
+let nombreaticle = 0
 export class CommandeContainer extends Component {
     state = {
         qte: this.props.commande.qte,
@@ -55,33 +59,64 @@ export class CommandeContainer extends Component {
           qte++
  
       })*/
-    somme() {
+    total() {
+
         let a = []
-        let nombreaticle = this.props.commande.length;
+        let c = []
+        let d = []
+        nombreaticle = this.props.commande.length;
         a = this.props.commande.map(el => el.prix)
-        var somme = a.reduce((a, b) => +a + (+b))
+
+
+        console.log(a)
+        c = this.props.commande.map(el => el.qte)
+        var qte = c.reduce((c, b) => +c + (+b))
+        console.log(c)
+        for (let i = 0; i < nombreaticle; i++) {
+            d.push(a[i] * c[i])
+        }
+
+        //  console.log(d)
+
+        for (let i = 0; i < d.length; i++) {
+            somme = somme + d[i]
+        }
         console.log(somme)
+        this.state.item.push(somme)
+        this.state.item.push(qte)
+        console.log(this.state.item)
+
+
         this.form.current.innerHTML = `
-        <div class="ui info message transition" >
-      <i class="close icon" ></i> $
-      <div class="header"> $
-        Was this what you wanted?
-          </div>
+      
+     
       <ul class="list">
-        <li> La somme de votre panier est ${somme} DT </li>
-        <li>Number of item : ${nombreaticle} </li>
+        <h5> Le total de votre  comande est ${somme} DT </h5>
+        <h6>vous avez : ${qte} Article </h6>
       </ul>
+     
     </div>
         `
-        /*   this.form.current.style.color = "red"
-           this.form.current.style.width = "1200px"
-           console.log(this.btn.current.style = 'visibility: visible;')*/
+
 
     }
 
     componentDidMount() {
         this.props.getAllCommande();
         //this.props.getALLtotalCommande();
+
+    }
+    orderbutton() {
+        let date = Date(Date.now()).toString().substring(0, 25)
+        Axios.post(`http://localhost:3004/order/`, ({
+            "somme": somme,
+            "nombrearticle": nombreaticle,
+            "date": date
+        }))
+            .then((res) => alert('MERCI AVOIR NOUS VISTER'))
+
+            .catch((error) => alert(error))
+
 
     }
     render() {
@@ -92,7 +127,7 @@ export class CommandeContainer extends Component {
             //  let addModelClose = () => this.setState({ addModelShow: false });
             <div >
 
-
+                <button onclick={() => this.props.validcmd(this.state.item)}>valider la commande</button>
 
 
 
@@ -108,7 +143,8 @@ export class CommandeContainer extends Component {
 
 
                 <p> <div ref={this.form} className="positionleft">
-                </div><button className="Positionright ui inverted green button" onClick={() => this.somme()}>Calculate sum</button></p>
+                </div><button className="btn-valider" onClick={() => this.total()}>Total de commande</button></p>
+                <p className="centre-item" ref={this.btn}><button className="btn-valider" onClick={() => this.orderbutton()}>Order Now </button></p>
 
                 <div className="menus-item">
                     {commande.map((el, i) => (
@@ -120,13 +156,13 @@ export class CommandeContainer extends Component {
                                         waves />
                                     <MDBCardBody>
                                         <MDBCardTitle>{el.title}</MDBCardTitle>
-                                        <MDBCardText>{el.prix}</MDBCardText>
+                                        <MDBCardText>{el.prix} {el.qte}</MDBCardText>
 
 
 
 
-                                        <MDBBtn className="btn-blue" onClick={this.increment}> +</MDBBtn>   <MDBCardText>{el.qte}</MDBCardText>
-                                        <MDBBtn className="btn-blue" > -</MDBBtn>
+                                        <MDBBtn className="btn-blue" onClick={this.increment}> +</MDBBtn>   {el.qte}
+                                        <MDBBtn className="btn-blue" onClick={this.dicrement} > -</MDBBtn>
 
                                     </MDBCardBody>
                                 </MDBCard>
@@ -152,6 +188,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     getAllCommande: () => dispatch(getCommandeFromApi()),
+    validcmd: (item) => dispatch(vlidcmdFromApi(item))
     //  getALLtotalCommande: () => dispatch(getCommandeTotalFromApi())
 
 });
