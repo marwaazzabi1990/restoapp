@@ -1,5 +1,34 @@
-import { ADD_COMMANDE, DELETE_COMMANDE, GET_ALL_COMMANDE, GEt_ALL_TOTAL, VALIDCMD } from "./types";
+import { ADD_COMMANDE, DELETE_COMMANDE, GET_ALL_COMMANDE, GEt_ALL_TOTAL, VALIDCMD, MODIF_QTE } from "./types";
 import Axios from "axios";
+
+
+/*******************editer quantite*************** */
+
+export const modifqte = (payload) => ({
+  type: MODIF_QTE,
+  payload,
+})
+export function modifqtee(data) {
+  let id = data.id
+  let a = data.img
+  let b = data.prix
+  let c = data.title
+  let qte = data.qte
+  return (dispatch) =>
+    Axios.put(`http://localhost:3004/commande/${data.id}`, { img: a, prix: b, title: c, qte: qte }).then((res) => {
+      dispatch(modifqte(res.data));
+      window.location.reload(false);
+    });
+}
+
+
+
+
+
+
+
+
+
 
 /*******VALID QTE */
 export const validcmd = (payload) => ({

@@ -7,15 +7,30 @@ import {
 import EdithItem from "./edithItem";
 import { addcmdFromApi } from "../actions/CommandeAction";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { MDBCard, MDBCardTitle, MDBBtn, MDBCardGroup, MDBCardImage, MDBCardText, MDBCardBody, MDBCol } from "mdbreact";
+import { MDBTableEditable, MDBCard, MDBCardTitle, MDBBtn, MDBCardGroup, MDBCardImage, MDBIcon, MDBCardText, MDBCardBody, MDBCol, MDBCardHeader, MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 //import ModalPage from "../components/ModalPageAjout"
 //import ModalPageModif from "../components/ModalPageModif"
 //import { Button, ButtonToolbar } from "react-bootstrap";
 import "./commandecontainer.css"
+import Modalmodifqte from "./Modelmodifqte"
 import Axios from "axios";
 
 
 import "./menucontain.css";
+
+const columns = ["Person Name", "Age", "Company Name", "Country", "City"];
+
+const data = [
+    ["Aurelia Vega", 30, "Deepends", "Spain", "Madrid"],
+    ["Guerra Cortez", 45, "Insectus", "USA", "San Francisco"],
+    ["Guadalupe House", 26, "Isotronic", "Germany", "Frankfurt am Main"],
+    ["Elisa Gallagher", 31, "Portica", "United Kingdom", "London"]
+];
+
+
+
+
+
 var somme = 0
 let nombreaticle = 0
 export class CommandeContainer extends Component {
@@ -127,8 +142,6 @@ export class CommandeContainer extends Component {
             //  let addModelClose = () => this.setState({ addModelShow: false });
             <div >
 
-                <button onclick={() => this.props.validcmd(this.state.item)}>valider la commande</button>
-
 
 
 
@@ -142,11 +155,53 @@ export class CommandeContainer extends Component {
 
 
 
+
+                <p className="centre-item" ref={this.btn}><button className="btn-valider" onClick={() => this.orderbutton()}>Confirmer votre commande</button></p>
+
+
+                <MDBTable>
+
+                    <MDBTableHead>
+
+
+
+
+                    </MDBTableHead>
+                    {commande.map((el, i) => (
+                        <div >
+
+
+
+                            <tr>
+                                <td>image</td>
+                                <td>Plats</td>
+                                <td>Prix</td>
+                                <td>Quantite</td>
+                            </tr>
+                            <MDBTableBody >
+                                <tr>
+                                    <td className="tbody"><img className="imgcmd" src={el.img} /></td>
+                                    <td className="tbody">{el.nom_plat}</td>
+                                    <td className="tbody">{el.prix}</td>
+                                    <td className="tbody">{el.qte}</td>
+                                    <td> <Modalmodifqte el={el}></Modalmodifqte></td>
+                                </tr>
+
+
+                            </MDBTableBody>
+                        </div>
+                    ))}
+
+
+                </MDBTable>
                 <p> <div ref={this.form} className="positionleft">
                 </div><button className="btn-valider" onClick={() => this.total()}>Total de commande</button></p>
-                <p className="centre-item" ref={this.btn}><button className="btn-valider" onClick={() => this.orderbutton()}>Order Now </button></p>
 
-                <div className="menus-item">
+
+
+
+
+                {/*  <div className="menus-item">
                     {commande.map((el, i) => (
                         <div >
 
@@ -170,7 +225,7 @@ export class CommandeContainer extends Component {
                         </div>
 
                     ))}
-                </div>
+                    </div>*/}
 
 
 

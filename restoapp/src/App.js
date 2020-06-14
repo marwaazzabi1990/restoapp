@@ -4,6 +4,7 @@ import MenusContainer from "./components/menusContainer";
 import Navbar from "./components/navbar/navbar";
 import CommandeContainer from "./components/commandecontainer";
 import MenusContainClient from "./components/menucontainclient"
+import SingIn from "./components/singin"
 import ss from "./store.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -16,6 +17,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
+            <Navbar />
+            <SingIn />
+          </Route >
+          <Route exact path="/containeadmin">
             <Navbar />
             <MenusContainClient />
           </Route >
