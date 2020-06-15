@@ -1,3 +1,35 @@
-.pos {
+form {
+  margin-top: 100px;
+  margin-left: 400px;
+  border-color: #f74505;
+}
+.title {
+  color: #f74505;
+  margin-left: 450px;
+}
+.innp {
+  margin-left: 60px;
+}
+.input {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+.pp {
+  margin-left: 400px;
+}
+.inn {
+  margin-left: 40px;
+}
+.input2 {
+  margin-left: 10px;
+}
+.button {
+  border-radius: 5px;
+  width: 100px;
+  background-color: #f74505;
   margin-left: 100px;
+}
+.lb {
+  font-weight: bold;
+  padding-right: 10px;
 }

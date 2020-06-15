@@ -13,6 +13,7 @@ import { MDBCard, MDBCardTitle, MDBBtn, MDBCardGroup, MDBCardImage, MDBCardText,
 import ModalPage from "../components/ModalPageAjout"
 import ModalPageModif from "../components/ModalPageModif"
 //import { Button, ButtonToolbar } from "react-bootstrap";
+import HeadShake from 'react-reveal/HeadShake';
 
 
 import "./menucontain.css";
@@ -63,14 +64,15 @@ export class MenusContainer extends Component {
     return (
       //  let addModelClose = () => this.setState({ addModelShow: false });
       <div >
+        <br></br>
+        <div className="hh">
+          <ModalPage
+            title={this.title}
+            price={this.price}
+            image={this.image}
 
-
-        <ModalPage
-          title={this.title}
-          price={this.price}
-          image={this.image}
-
-        />
+          />
+        </div>
 
 
 
@@ -83,12 +85,13 @@ export class MenusContainer extends Component {
                   <MDBCardImage className="img-card-menu" src={el.img}
                     waves />
                   <MDBCardBody>
-                    <Flip top>  <MDBCardTitle>{el.title}</MDBCardTitle>
-                      <MDBCardText>{el.prix}</MDBCardText> </Flip>
-                    < ModalPageModif el={el} />
+                    <HeadShake> <MDBCardTitle>{el.title}</MDBCardTitle>
+                      <MDBCardText>{el.prix}DT</MDBCardText> </HeadShake>                    <div className="pos2">
+                      < ModalPageModif el={el} />
 
 
-                    <MDBBtn className="btn-red" onClick={() => this.props.deleteMenu(el.id)}><i class="fas fa-trash"></i>   Supprimer</MDBBtn>
+                      <MDBBtn className="btn-red nn" onClick={() => this.props.deleteMenu(el.id)}><i class="fas fa-trash"></i>   </MDBBtn>
+                    </div>
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>

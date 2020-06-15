@@ -123,7 +123,7 @@ class Login extends Component {
                                 <input type="password" name="Password" placeholder="Password" onChange={(e) => this.changepass(e)} />
                                 <br></br> <small ref={this.errorpass}>enter a password + 8 characters</small> <br></br>
                                 <label>Role</label> <br></br>
-                                <input type="text" name="Role" onChange={(e) => this.changeRole(e)} />}
+                                <input type="text" name="Role" onChange={(e) => this.changeRole(e)} />
                             </div>
 
 
@@ -138,7 +138,7 @@ class Login extends Component {
 
                         </form>
                         <div class="ui floating message">
-                            <p>you D'ont have acount !! <Link to="signup"> you can sing up from here </Link> </p>
+                            <p className="pp">you D'ont have acount !! <Link to="signup"> you can sing up from here </Link> </p>
                         </div>
                     </div>
                 </div>

@@ -13,13 +13,6 @@
       "title": "soupe",
       "qte": 1,
       "id": 3
-    },
-    {
-      "img": "https://www.onamangepourvous.tn/wp-content/uploads/2018/02/6-1.jpg",
-      "prix": "40",
-      "title": "s7an toinsi",
-      "qte": "1",
-      "id": 4
     }
   ],
   "commande": [],
@@ -46,18 +39,25 @@
       "id": 3
     },
     {
-      "somme": 80,
-      "nombrearticle": 2,
-      "date": "Mon Jun 15 2020 16:43:40 ",
-      "nomuser": "tt",
-      "id": 4
-    },
-    {
       "somme": 30,
       "nombrearticle": 1,
       "date": "Mon Jun 15 2020 17:14:24 ",
       "nomuser": "maram",
       "id": 5
+    },
+    {
+      "somme": 50,
+      "nombrearticle": 2,
+      "date": "Mon Jun 15 2020 22:51:11 ",
+      "nomuser": "salwa",
+      "id": 6
+    },
+    {
+      "somme": 70,
+      "nombrearticle": 2,
+      "date": "Mon Jun 15 2020 23:59:00 ",
+      "nomuser": "salwa",
+      "id": 7
     }
   ],
   "user": [
@@ -92,6 +92,14 @@
       "email": "ss@gg.com",
       "image": "https://assets.afcdn.com/story/20171206/1137982_w980h638c1cx202cy281.jpg",
       "id": 4
+    },
+    {
+      "first_name": "salwa",
+      "last_name": "faous",
+      "password": "1230",
+      "email": "salwa@gmail.com",
+      "image": "https://assets.afcdn.com/story/20171206/1137982_w980h638c1cx202cy281.jpg",
+      "id": 5
     }
   ]
 }

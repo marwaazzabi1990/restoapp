@@ -1,0 +1,7 @@
+.pos2 {
+  display: flex;
+  justify-content: space-between;
+}
+.bth {
+  width: 100px;
+}

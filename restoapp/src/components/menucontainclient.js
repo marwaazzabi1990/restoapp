@@ -12,7 +12,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { MDBCard, MDBCardTitle, MDBBtn, MDBCardGroup, MDBCardImage, MDBCardText, MDBCardBody, MDBCol } from "mdbreact";
 import ModalPage from "../components/ModalPageAjout"
 import ModalPageModif from "../components/ModalPageModif"
+import HeadShake from 'react-reveal/HeadShake';
 //import { Button, ButtonToolbar } from "react-bootstrap";
+
+import { MDBIcon } from "mdbreact";
 
 
 import "./menucontainclient.css";
@@ -83,14 +86,14 @@ export class MenusContainerClient extends Component {
                                     <MDBCardImage className="img-card-menu" src={el.img}
                                         waves />
                                     <MDBCardBody>
-                                        <Flip top> <MDBCardTitle > {el.title}</MDBCardTitle>
-                                            <MDBCardText>{el.prix}</MDBCardText></Flip>
+                                        <HeadShake> <MDBCardTitle > {el.title}</MDBCardTitle>
+                                            <MDBCardText>{el.prix} DT</MDBCardText></HeadShake>
 
 
 
 
                                         <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(
-                                        el )}> Commander</MDBBtn>
+                                            el)}> <MDBIcon icon="cart-plus" /></MDBBtn>
 
                                     </MDBCardBody>
                                 </MDBCard>

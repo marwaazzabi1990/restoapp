@@ -16,3 +16,13 @@
 .btn-red {
   background-color: red;
 }
+.hh {
+  padding-left: -200px;
+}
+.ss {
+  margin-left: 30px;
+}
+.pos2 {
+  display: flex;
+  justify-content: space-around;
+}

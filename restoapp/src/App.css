@@ -10,8 +10,13 @@
 }
 
 .App {
-  text-align: center;
-  height: 10000px;
+  background-image: url("https://image.freepik.com/photos-gratuite/arrangement-plat-boite-salade-sauce_23-2148247883.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 @keyframes App-logo-spin {
   from {

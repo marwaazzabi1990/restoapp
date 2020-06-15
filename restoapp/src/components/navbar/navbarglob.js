@@ -40,7 +40,9 @@ export class Navbarglob extends Component {
                 <div className="inscription">
                     <ul className="nav-listes">
                         {listes.map((el) => (
-                            <Link to={el.link}>{el.name}</Link>
+                            <div>
+                                <li className="cc"><Link to={el.link}>{el.name}</Link></li>
+                            </div>
                         ))}
                     </ul>
                     <Link to="/login"  >  <MDBBtn color="primary" >Deconexion</MDBBtn></Link>

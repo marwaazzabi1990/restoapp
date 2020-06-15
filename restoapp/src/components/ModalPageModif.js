@@ -7,7 +7,8 @@ import {
     deletemenuToApi,
     ModifierPlats
 } from "../actions/MenuAction";
-import { addcmdFromApi } from "../actions/CommandeAction";
+import { MDBIcon } from "mdbreact";
+
 import "./ModalPage.css"
 
 class ModalPage extends Component {
@@ -34,7 +35,7 @@ class ModalPage extends Component {
         return (
 
             <MDBContainer>
-                <MDBBtn color="info" onClick={this.toggle(8)}>Editer Plats</MDBBtn>
+                <MDBBtn color="info" onClick={this.toggle(8)}><MDBIcon icon="pencil-alt" /></MDBBtn>
                 <MDBModal isOpen={this.state.modal8} toggle={this.toggle(8)} fullHeight position="top">
                     <MDBModalHeader toggle={this.toggle(8)}>Modifier Plats</MDBModalHeader>
                     <MDBModalBody>

@@ -40,9 +40,9 @@ class ModalPage extends Component {
             <MDBContainer>
                 <MDBBtn color="info" onClick={this.toggle(8)}>Ajouter Plat</MDBBtn>
                 <MDBModal isOpen={this.state.modal8} toggle={this.toggle(8)} fullHeight position="top">
-                    <MDBModalHeader toggle={this.toggle(8)}>Ajouter Plats</MDBModalHeader>
+                    <span > <MDBModalHeader className="tt" toggle={this.toggle(8)}>Ajouter Plats</MDBModalHeader> </span>
                     <MDBModalBody>
-                        <form>
+                        <form className="ff">
                             <label>title de plats</label>
                             <input type="text" name="title" onChange={this.title}></input>
                             <label>prix</label>

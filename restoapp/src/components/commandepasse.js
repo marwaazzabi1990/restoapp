@@ -10,10 +10,13 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { MDBCard, MDBCardTitle, MDBBtn, MDBCardGroup, MDBCardImage, MDBCardText, MDBCardBody, MDBCol } from "mdbreact";
 import ModalPage from "../components/ModalPageAjout"
 import ModalPageModif from "../components/ModalPageModif"
+import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
+import { MDBIcon } from "mdbreact";
 //import { Button, ButtonToolbar } from "react-bootstrap";
 
 
 import "./menucontainclient.css";
+import Axios from "axios";
 
 export class Commandepasser extends Component {
     state = {
@@ -54,6 +57,21 @@ export class Commandepasser extends Component {
      edither = (el) => {
          this.setState({ item: el });
      };*/
+    delateallorder = (id) => {
+        Axios.delete(`http://localhost:3004/order/${id}`).then(response => {
+            console.log(response)
+
+        })
+        alert('vous avez refuser cette commande')
+        window.location.reload(false);
+
+
+    }
+    accepte = () => {
+        alert('cette commande est accepté')
+    }
+
+
     componentDidMount() {
         this.props.getOrderFromApi();
     }
@@ -66,29 +84,68 @@ export class Commandepasser extends Component {
             //  let addModelClose = () => this.setState({ addModelShow: false });
             <div >
 
+                <div>
 
 
-                <Flip top> <h1>Liste de commande Passer</h1></Flip>
-
-
-
-                <div className="menus-item">
-                    {(order.map((el, i) => (
-                        <div>
-                            <h1> {el.somme}</h1>
-                            <h2>{el.nombrearticle}</h2>
-                            <h3>  {el.date}</h3>
-                            <h4>{el.nomuser}</h4>
-                        </div>
-
-                    )))}
-
+                    <Flip top> <h1>Liste de commande Passer</h1></Flip>
                 </div>
+                <div>
 
-            </div >
+                    <MDBTable>
+
+                        <MDBTableHead>
+
+
+
+
+                        </MDBTableHead>
+
+                        {(order.map((el, i) => (
+
+                            <div >
+
+
+
+                                <tr>
+                                    <td>nom utlisateur</td>
+                                    <td>Somme</td>
+                                    <td>Quantite</td>
+                                    <td>Date</td>
+                                    <td>Action</td>
+                                </tr>
+                                <MDBTableBody >
+                                    <tr>
+                                        <td className="tbody">{el.nomuser}</td>
+                                        <td className="tbody">{el.somme}</td>
+                                        <td className="tbody">{el.nombrearticle}</td>
+                                        <td className="tbody">{el.date}</td>
+                                        <td>
+                                            <div className="pos2">
+                                                <div>
+                                                    <button onClick={() => this.accepte()} className="bth"><MDBIcon icon="calendar-check" /></button>
+                                                </div>
+                                                <div>
+                                                    <button onClick={() => this.delateallorder(el.id)} className="bth"><MDBIcon icon="calendar-times" /></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                </MDBTableBody>
+                            </div>
+
+
+                        )))};
+                        </MDBTable>
+                </div>
+            </div>
         );
     }
 }
+
+
+
 
 const mapStateToProps = (state) => ({
     order: state.commande,

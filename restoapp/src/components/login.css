@@ -1,12 +1,18 @@
 input {
   border-radius: 5px;
 }
-.validbutton {
-  border-radius: 10px;
-  color: red;
-  background-color: transparent;
-}
+
 .validbutton:hover {
   background-color: red;
   color: black;
+}
+.pp {
+  margin-left: 400px;
+}
+.button {
+  border-radius: 5px;
+  width: 100px;
+  padding-left: 20px;
+  background-color: #f74505;
+  margin-left: 60px;
 }
