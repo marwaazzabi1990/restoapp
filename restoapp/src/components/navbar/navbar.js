@@ -2,18 +2,16 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Navbar.css";
 import logo from "./logo.png";
+import { MDBBtn } from "mdbreact";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Axios from "axios"
 
 const listes = [
-  { name: "Menu", link: "/" },
-  { name: "commande", link: "/commande" },
-  { name: " client", link: "/containeclient" },
-  { name: " admin", link: "/containeadmin" },
-  { name: "user", link: "/user" },
-  { name: "Sing In", link: "/signup" },
-  { name: "log", link: "/login" },
+  { name: "Menu", link: "/containeclient" },
+  { name: "pannier", link: "/commande" },
+  { name: "Inscrivez-vous", link: "/" },
+  { name: "connectez-vous", link: "/login" },
 
 ];
 
@@ -46,7 +44,8 @@ export class Navbar extends Component {
               <Link to={el.link}>{el.name}</Link>
             ))}
           </ul>
-          <button onClick={() => this.logout()}>log out </button>
+          <Link to="/login"  >  <MDBBtn color="primary" onClick={() => this.logout()}>Deconexion</MDBBtn></Link>
+
         </div>
       </div>
     );

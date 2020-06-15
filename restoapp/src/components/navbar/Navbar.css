@@ -10,6 +10,8 @@
 }
 .inscription {
   margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
 }
 .logo {
   border-radius: 20px;

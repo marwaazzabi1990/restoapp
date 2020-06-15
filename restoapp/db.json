@@ -44,6 +44,20 @@
       "date": "Mon Jun 15 2020 12:54:07 ",
       "nomuser": "maram",
       "id": 3
+    },
+    {
+      "somme": 80,
+      "nombrearticle": 2,
+      "date": "Mon Jun 15 2020 16:43:40 ",
+      "nomuser": "tt",
+      "id": 4
+    },
+    {
+      "somme": 30,
+      "nombrearticle": 1,
+      "date": "Mon Jun 15 2020 17:14:24 ",
+      "nomuser": "maram",
+      "id": 5
     }
   ],
   "user": [
@@ -70,6 +84,14 @@
       "email": "aya@gmail.com",
       "image": "https://assets.afcdn.com/story/20171206/1137982_w980h638c1cx202cy281.jpg",
       "id": 3
+    },
+    {
+      "first_name": "tt",
+      "last_name": "yy",
+      "password": "123",
+      "email": "ss@gg.com",
+      "image": "https://assets.afcdn.com/story/20171206/1137982_w980h638c1cx202cy281.jpg",
+      "id": 4
     }
   ]
 }

@@ -13,5 +13,6 @@ export const DELETE_COMMANDE = "DELETE_COMMANDE";
 export const GET_ALL_COMMANDE = "GET_ALL_COMMANDE";
 export const VALIDCMD = "VALIDCMD"
 export const MODIF_QTE = "MODIF_QTE"
+export const GET_ALL_ORDER = "GET_ALL_ORDER"
 /***************TOTAL******************** */
 export const GEt_ALL_TOTAL = "GEt_ALL_TOTAL";

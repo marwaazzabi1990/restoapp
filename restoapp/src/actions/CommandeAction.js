@@ -1,4 +1,4 @@
-import { ADD_COMMANDE, DELETE_COMMANDE, GET_ALL_COMMANDE, GEt_ALL_TOTAL, VALIDCMD, MODIF_QTE } from "./types";
+import { ADD_COMMANDE, DELETE_COMMANDE, GET_ALL_COMMANDE, GEt_ALL_TOTAL, VALIDCMD, MODIF_QTE, GET_ALL_ORDER } from "./types";
 import Axios from "axios";
 
 
@@ -66,7 +66,7 @@ export function addcmdFromApi(data) {
   let b = data.prix
   let c = data.title
   let qte = data.qte
- // let nom = nom
+  // let nom = nom
 
   /******* */
 
@@ -76,7 +76,7 @@ export function addcmdFromApi(data) {
   return (dispatch) => {
     alert("ajouter au commande")
 
-    Axios.post(`http://localhost:3004/commande`, { img: a, nom_plat: c, prix: b, qte: qte}).then((res) => {
+    Axios.post(`http://localhost:3004/commande`, { img: a, nom_plat: c, prix: b, qte: qte }).then((res) => {
       dispatch(commander(data))
 
 
@@ -105,6 +105,19 @@ export function getCommandeFromApi() {
       dispatch(getAllCommande(res.data))
     );
 
+}
+/********************************alll orders */
+export const getOrderFromApi = (payload) => ({
+  type: GET_ALL_ORDER,
+  payload,
+});
+
+export function getOrderFromApii() {
+
+  return (dispatch) =>
+    Axios.get("http://localhost:3004/order").then((res) =>
+      dispatch(getOrderFromApi(res.data))
+    );
 }
 
 /*******************************total */

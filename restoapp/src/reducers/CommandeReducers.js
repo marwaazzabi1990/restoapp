@@ -2,8 +2,9 @@ import {
   ADD_COMMANDE,
   DELETE_COMMANDE,
   GET_ALL_COMMANDE,
-  GEt_ALL_TOTAL
+  GEt_ALL_TOTAL,
 
+  GET_ALL_ORDER
 } from "../actions/types";
 const initialState = [];
 export default function CommandeReducer(state = initialState, action) {
@@ -19,6 +20,9 @@ export default function CommandeReducer(state = initialState, action) {
   if (action.type === GEt_ALL_TOTAL) {
     return action.payload;
 
+  }
+  if (action.type === GET_ALL_ORDER) {
+    return action.payload;
   }
 
   return state;

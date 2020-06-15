@@ -11,6 +11,10 @@ export default function Signup() {
     const image = useRef(null)
     const [show, setShow] = useState(false);
     function senddata() {
+        alert('rrrrrraaaaaaaaaaa')
+
+
+        console.log(name.current.value)
         axios.post(`http://localhost:3004/user`, {
             "first_name": name.current.value,
             "last_name": lastname.current.value,
@@ -72,10 +76,10 @@ export default function Signup() {
                         </div>
                     </div>
                 </div>
-                {/* <div class="field">
+                <div class="field">
 
                     <input type="text" ref={image} name="avatar" placeholder="avatar" required />
-    </div>*/}
+                </div>
                 <button value="submit" class="ui submit button" onClick={senddatatoserver}> submit</button>
             </form>
             <div class="ui floating message">
