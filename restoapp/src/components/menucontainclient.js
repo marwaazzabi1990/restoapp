@@ -5,6 +5,7 @@ import {
     addmenuToApi,
     deletemenuToApi,
 } from "../actions/MenuAction";
+import Flip from 'react-reveal/Flip';
 import EdithItem from "./edithItem";
 import { addcmdFromApi } from "../actions/CommandeAction";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -69,7 +70,7 @@ export class MenusContainerClient extends Component {
 
 
 
-                <h1>Notre cher client <span>voila notre menu</span> </h1>
+                <Flip top> <h1>Notre Menu </h1></Flip>
 
 
 
@@ -77,17 +78,15 @@ export class MenusContainerClient extends Component {
                     {menus.map((el, i) => (
                         <div >
 
-                            <MDBCol className="dispo" style={{ maxWidth: "22rem" }}>
+                            <MDBCol className="dispo" style={{ maxWidth: "29rem" }}>
                                 <MDBCard>
                                     <MDBCardImage className="img-card-menu" src={el.img}
-                                        waves />
+                                    />
                                     <MDBCardBody>
-                                        <MDBCardTitle > {el.title}</MDBCardTitle>
-                                        <MDBCardText>{el.prix}</MDBCardText>
+                                        <Flip top> <MDBCardTitle > {el.title}</MDBCardTitle>
+                                            <MDBCardText>{el.prix}</MDBCardText></Flip>
 
-                                        <MDBBtn className="btn-blue" onClick={this.increment}> +</MDBBtn>
-                                        <input type="text" defaultValue="1" onChange={this.quatite}  ></input>
-                                        <MDBBtn className="btn-blue" onClick={this.dicrement} > -</MDBBtn>
+
 
 
                                         <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(el)}> Commander</MDBBtn>
@@ -102,7 +101,7 @@ export class MenusContainerClient extends Component {
 
 
 
-            </div>
+            </div >
         );
     }
 }

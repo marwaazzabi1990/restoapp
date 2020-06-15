@@ -36,6 +36,7 @@ export function ModifierPlats(data) {
   let a = data.img
   let b = data.prix
   let c = data.title
+  
   return (dispatch) =>
     Axios.put(`http://localhost:3004/menu/${data.id}`, { img: a, prix: b, title: c }).then((res) => {
       dispatch(ModifierPlat(res.data));

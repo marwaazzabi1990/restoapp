@@ -42,9 +42,9 @@ class Modalmodifqte extends Component {
                     <MDBModalBody>
                         <form>
 
-                            <label>quantite</label>
+                            <label> vous pouvez modifier quantite</label>
                             <input type="text" defaultValue={this.props.el.qte} name="img" onChange={(e) => this.setState({ qte: e.target.value })}></input>
-                            <h1>{this.props.el.id}</h1>
+
                         </form>
                     </MDBModalBody>
                     <MDBModalFooter>

@@ -42,20 +42,20 @@ export default function Signup() {
         <div className="ui inverted segment">
             <div class="ui message">
                 <div class="header">
-                    Changes in Service
-  </div>
-                <p>We just updated our privacy policy here to better service our customers. We recommend reviewing the</p>
+                    <h1>Inscrivez vous</h1>
+
+                </div>
             </div>
             <form class="ui form inverted">
-                <h4 class="ui dividing header" style={{ color: "white" }}>Sign in</h4>
+
                 <div class="field">
                     <div class="two fields">
                         <div class=" eight wide field">
-                            <label>First Name</label>
+
                             <input ref={name} type="text" name="first-name" placeholder="First Name" required />
                         </div>
                         <div class=" eight wide field">
-                            <label>Last Name</label>
+
                             <input ref={lastname} type="text" name="last-name" placeholder="Last Name" required />
                         </div>
                     </div>
@@ -63,23 +63,23 @@ export default function Signup() {
                 <div class="field">
                     <div class="two fields">
                         <div class=" eight wide field">
-                            <label>Email</label>
+
                             <input type="email" ref={email} name="first-name" placeholder="Email" required />
                         </div>
                         <div class=" eight wide field">
-                            <label>Password</label>
+
                             <input type="password" ref={password} name="password" placeholder="Password" required />
                         </div>
                     </div>
                 </div>
-                <div class="field">
-                    <label>Avatar</label>
+                {/* <div class="field">
+
                     <input type="text" ref={image} name="avatar" placeholder="avatar" required />
-                </div>
+    </div>*/}
                 <button value="submit" class="ui submit button" onClick={senddatatoserver}> submit</button>
             </form>
             <div class="ui floating message">
-                <p>you have acount !! <Link to="/login"> you can connect from here </Link> </p>
+                <p>vous avez une compte !! <Link to="/login"> connectez vous</Link> </p>
             </div>
         </div>
 

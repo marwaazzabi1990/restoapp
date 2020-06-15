@@ -5,6 +5,7 @@ import {
   addmenuToApi,
   deletemenuToApi,
 } from "../actions/MenuAction";
+import Flip from 'react-reveal/Flip';
 import EdithItem from "./edithItem";
 import { addcmdFromApi } from "../actions/CommandeAction";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -82,10 +83,10 @@ export class MenusContainer extends Component {
                   <MDBCardImage className="img-card-menu" src={el.img}
                     waves />
                   <MDBCardBody>
-                    <MDBCardTitle>{el.title}</MDBCardTitle>
-                    <MDBCardText>{el.prix}</MDBCardText>
+                    <Flip top>  <MDBCardTitle>{el.title}</MDBCardTitle>
+                      <MDBCardText>{el.prix}</MDBCardText> </Flip>
                     < ModalPageModif el={el} />
-                    <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(el)}> Commander</MDBBtn>
+
 
                     <MDBBtn className="btn-red" onClick={() => this.props.deleteMenu(el.id)}><i class="fas fa-trash"></i>   Supprimer</MDBBtn>
                   </MDBCardBody>

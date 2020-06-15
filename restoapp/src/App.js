@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import MenusContainer from "./components/menusContainer";
 import Navbar from "./components/navbar/navbar";
+import Navbaradmin from "./components/navbar/Navbaradmin"
 import CommandeContainer from "./components/commandecontainer";
 import MenusContainClient from "./components/menucontainclient"
 import Signup from "./components/singin"
@@ -26,12 +27,12 @@ function App() {
             <Navbar />
             <Log />
           </Route >
-          <Route exact path="/">
+          <Route exact path="/containeclient">
             <Navbar />
             <MenusContainClient />
           </Route >
           <Route exact path="/containeadmin">
-            <Navbar />
+            <Navbaradmin />
             <MenusContainer />
           </Route >
 

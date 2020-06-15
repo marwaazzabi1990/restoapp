@@ -4,15 +4,21 @@ import { Link } from 'react-router-dom'
 //import '../fichecss.css'
 import { getusersFromApi } from '../actions/UserAction'
 import { connect } from 'react-redux'
-
+import MenusContainer from "./menusContainer"
+import MenusContainClient from "./menucontainclient"
+import "./login.css"
 let tabmail = []
 let password = []
+var loginButton = ""
+
+
 class Login extends Component {
     errormail = React.createRef();
     errorpass = React.createRef();
     state = {
         pass: "",
-        email: ""
+        email: "",
+        role: "",
     }
     componentDidMount() {
         return this.props.getusersFromApi()
@@ -31,6 +37,11 @@ class Login extends Component {
             this.errormail.current.style = "color : green"
         }
     }
+    changeRole(e) {
+        this.setState({ role: e.target.value })
+        console.log(this.state.role)
+    }
+
     changepass(e) {
         this.setState({ pass: e.target.value })
         if (this.state.pass.length > 8) {
@@ -48,6 +59,18 @@ class Login extends Component {
     preparation() {
         tabmail = this.props.users.map(el => el.email)
         password = this.props.users.map(el => el.password)
+    }
+
+    commponet() {
+        console.log(this.state.role)
+        if (this.state.role == "admin") {
+            // alert('vous etes admin')
+            loginButton = "/containeadmin";
+
+        } else {
+            // alert('vous etes user')
+            loginButton = "/containeclient";
+        }
     }
     verefieruser(e) {
         this.preparation()
@@ -76,7 +99,10 @@ class Login extends Component {
             window.location.reload()
             e.preventDefault()
         }
+        this.commponet()
+
     }
+
 
     render() {
         //   const { users } = this.props;
@@ -88,16 +114,28 @@ class Login extends Component {
                         <form class="ui success form inverted">
                             <h4 class="ui dividing header" style={{ color: "white" }}>Sign in</h4>
                             <div class="field">
-                                <label>Email</label>
+                                <label>Email</label> <br></br>
                                 <input type="email" name="Email" placeholder="Email" onChange={(e) => this.changeemail(e)} />
-                                <small ref={this.errormail}>Please enter a valid email address </small>
+                                <br></br> <small ref={this.errormail}>Please enter a valid email address </small> <br></br>
                             </div>
                             <div class="field">
-                                <label>Password</label>
+                                <label>Password</label> <br></br>
                                 <input type="password" name="Password" placeholder="Password" onChange={(e) => this.changepass(e)} />
-                                <small ref={this.errorpass}>enter a password + 8 characters</small>
+                                <br></br> <small ref={this.errorpass}>enter a password + 8 characters</small> <br></br>
+                                <label>Role</label> <br></br>
+                                <input type="text" name="Role" onChange={(e) => this.changeRole(e)} />}
                             </div>
-                            <Link to="/"> <div class="ui submit button" onClick={(e) => this.verefieruser(e)}>Submit</div></Link>
+
+
+
+
+
+                            <Link to={loginButton}> <div class="ui submit button" onClick={(e) => this.verefieruser(e)}>Submit</div>
+
+
+
+                            </Link>
+
                         </form>
                         <div class="ui floating message">
                             <p>you D'ont have acount !! <Link to="signup"> you can sing up from here </Link> </p>

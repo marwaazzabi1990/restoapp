@@ -1,5 +1,5 @@
 .btn-valider {
-  background-color: crimson;
+  background-color: pink;
   margin-left: 500px;
 }
 .imgcmd {
@@ -9,4 +9,12 @@
 .tbody {
   width: 10000px;
   margin-left: 70px;
+}
+.pos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.p2 {
+  margin-left: -700px;
 }

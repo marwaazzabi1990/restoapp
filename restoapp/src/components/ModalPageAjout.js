@@ -59,6 +59,7 @@ class ModalPage extends Component {
                                 title: this.state.title,
                                 img: this.state.img,
                                 prix: this.state.prix,
+                                qte: 1
                             })} > Save changes</MDBBtn>
                     </MDBModalFooter>
                 </MDBModal>

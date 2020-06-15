@@ -154,11 +154,14 @@ export class CommandeContainer extends Component {
                 </div>
 
 
+                <div className="pos">
+                    <p > <div ref={this.form} className="positionleft">
+                    </div><button className="btn-valider" onClick={() => this.total()}>Total de commande</button></p>
+
+                    <p className="p2" ref={this.btn}><button className="btn-valider" onClick={() => this.orderbutton()}><MDBIcon icon="check" />confirmer</button></p>
 
 
-                <p className="centre-item" ref={this.btn}><button className="btn-valider" onClick={() => this.orderbutton()}>Confirmer votre commande</button></p>
-
-
+                </div>
                 <MDBTable>
 
                     <MDBTableHead>
@@ -194,8 +197,7 @@ export class CommandeContainer extends Component {
 
 
                 </MDBTable>
-                <p> <div ref={this.form} className="positionleft">
-                </div><button className="btn-valider" onClick={() => this.total()}>Total de commande</button></p>
+
 
 
 
