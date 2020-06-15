@@ -9,7 +9,7 @@ import MenusContainClient from "./menucontainclient"
 import "./login.css"
 let tabmail = []
 let password = []
-var loginButton = ""
+var loginButton = "/containeclient"
 
 
 class Login extends Component {
@@ -67,9 +67,6 @@ class Login extends Component {
             // alert('vous etes admin')
             loginButton = "/containeadmin";
 
-        } else {
-            // alert('vous etes user')
-            loginButton = "/containeclient";
         }
     }
     verefieruser(e) {
@@ -82,6 +79,7 @@ class Login extends Component {
             if (pass === password[i] && email === tabmail[i])
                 console.log(id = i)
 
+
         }
         if (id !== -1) {
             console.log(this.props.users[id])
@@ -93,13 +91,15 @@ class Login extends Component {
             localStorage.setItem("name", name)
             localStorage.setItem("lastname", lastname)
             localStorage.setItem("avatar", avatar)
+            this.commponet()
 
         }
         else {
             window.location.reload()
             e.preventDefault()
         }
-        this.commponet()
+
+
 
     }
 

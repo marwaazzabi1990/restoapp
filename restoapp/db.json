@@ -1,13 +1,6 @@
 {
   "menu": [
     {
-      "img": "https://image.freepik.com/photos-gratuite/delicieux-gateau-bundt-baies-close-up_114579-1304.jpg",
-      "prix": "987",
-      "title": "GATEAUX",
-      "qte": 1,
-      "id": 1
-    },
-    {
       "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
       "prix": "20",
       "title": "salade",
@@ -29,33 +22,28 @@
       "id": 4
     }
   ],
-  "commande": [
+  "commande": [],
+  "order": [
     {
-      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
-      "prix": "20",
-      "qte": "2",
+      "somme": 90,
+      "nombrearticle": 2,
+      "date": "Mon Jun 15 2020 10:03:01 ",
+      "nomuser": "maram",
       "id": 1
     },
     {
-      "img": "https://image.freepik.com/photos-gratuite/soupe-tomate-au-vert-table_140725-2447.jpg",
-      "prix": "30",
-      "qte": "3",
+      "somme": 1097,
+      "nombrearticle": 4,
+      "date": "Mon Jun 15 2020 10:16:12 ",
+      "nomuser": "marwa",
       "id": 2
     },
     {
-      "img": "https://image.freepik.com/photos-gratuite/salade-taboule_2829-10890.jpg",
-      "nom_plat": "salade",
-      "prix": "20",
-      "qte": 1,
-      "id": 3
-    }
-  ],
-  "order": [
-    {
       "somme": 70,
-      "nombrearticle": 3,
-      "date": "Sun Jun 14 2020 02:18:38 ",
-      "id": 1
+      "nombrearticle": 2,
+      "date": "Mon Jun 15 2020 12:54:07 ",
+      "nomuser": "maram",
+      "id": 3
     }
   ],
   "user": [
@@ -78,7 +66,7 @@
     {
       "first_name": "aya",
       "last_name": "chadi",
-      "password": "987456321",
+      "password": "123",
       "email": "aya@gmail.com",
       "image": "https://assets.afcdn.com/story/20171206/1137982_w980h638c1cx202cy281.jpg",
       "id": 3

@@ -15,7 +15,7 @@ import ModalPageModif from "../components/ModalPageModif"
 //import { Button, ButtonToolbar } from "react-bootstrap";
 
 
-import "./menucontain.css";
+import "./menucontainclient.css";
 
 export class MenusContainerClient extends Component {
     state = {
@@ -78,10 +78,10 @@ export class MenusContainerClient extends Component {
                     {menus.map((el, i) => (
                         <div >
 
-                            <MDBCol className="dispo" style={{ maxWidth: "29rem" }}>
+                            <MDBCol className="dispo" style={{ maxWidth: "22rem" }}>
                                 <MDBCard>
                                     <MDBCardImage className="img-card-menu" src={el.img}
-                                    />
+                                        waves />
                                     <MDBCardBody>
                                         <Flip top> <MDBCardTitle > {el.title}</MDBCardTitle>
                                             <MDBCardText>{el.prix}</MDBCardText></Flip>
@@ -89,7 +89,8 @@ export class MenusContainerClient extends Component {
 
 
 
-                                        <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(el)}> Commander</MDBBtn>
+                                        <MDBBtn className="btn-blue" onClick={() => this.props.addcmd(
+                                        el )}> Commander</MDBBtn>
 
                                     </MDBCardBody>
                                 </MDBCard>
@@ -112,7 +113,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     getAllPlats: () => dispatch(getPlatsFromApi()),
-    addcmd: (plats) => dispatch(addcmdFromApi(plats)),
+    addcmd: (plats, nom) => dispatch(addcmdFromApi(plats, nom)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MenusContainerClient);

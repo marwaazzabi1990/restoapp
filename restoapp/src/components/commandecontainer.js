@@ -121,16 +121,32 @@ export class CommandeContainer extends Component {
         //this.props.getALLtotalCommande();
 
     }
+
+
+
+
+
     orderbutton() {
         let date = Date(Date.now()).toString().substring(0, 25)
         Axios.post(`http://localhost:3004/order/`, ({
             "somme": somme,
             "nombrearticle": nombreaticle,
-            "date": date
+            "date": date,
+            "nomuser": localStorage.name
         }))
             .then((res) => alert('MERCI AVOIR NOUS VISTER'))
 
             .catch((error) => alert(error))
+
+
+    }
+    delateallcarte = (id) => {
+        alert('vous voulez supprimer')
+        let tabid = [];
+
+        Axios.delete(`http://localhost:3004/commande/${id}`)
+            .then(res => console.log(res))
+            .catch(error => console.log(error))
 
 
     }
@@ -156,9 +172,9 @@ export class CommandeContainer extends Component {
 
                 <div className="pos">
                     <p > <div ref={this.form} className="positionleft">
-                    </div><button className="btn-valider" onClick={() => this.total()}>Total de commande</button></p>
+                    </div><button onClick={() => this.total()}>Total de commande</button></p>
 
-                    <p className="p2" ref={this.btn}><button className="btn-valider" onClick={() => this.orderbutton()}><MDBIcon icon="check" />confirmer</button></p>
+                    <p className="p2" ref={this.btn}><button onClick={() => this.orderbutton()}><MDBIcon icon="check" />confirmer</button></p>
 
 
                 </div>
@@ -170,7 +186,7 @@ export class CommandeContainer extends Component {
 
 
                     </MDBTableHead>
-                    {commande.map((el, i) => (
+                    {(commande.map((el, i) => (
                         <div >
 
 
@@ -187,14 +203,15 @@ export class CommandeContainer extends Component {
                                     <td className="tbody">{el.nom_plat}</td>
                                     <td className="tbody">{el.prix}</td>
                                     <td className="tbody">{el.qte}</td>
-                                    <td> <Modalmodifqte el={el}></Modalmodifqte></td>
+                                    <td> <Modalmodifqte el={el}></Modalmodifqte>
+                                        <button onClick={() => this.delateallcarte(el.id)}>delate plat </button>
+                                    </td>
                                 </tr>
 
 
                             </MDBTableBody>
                         </div>
-                    ))}
-
+                    )))}
 
                 </MDBTable>
 

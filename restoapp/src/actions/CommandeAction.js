@@ -9,6 +9,7 @@ export const modifqte = (payload) => ({
   payload,
 })
 export function modifqtee(data) {
+  alert('vousavez')
   let id = data.id
   let a = data.img
   let b = data.prix
@@ -30,7 +31,7 @@ export function modifqtee(data) {
 
 
 
-/*******VALID QTE */
+/*******VALID order*/
 export const validcmd = (payload) => ({
   type: VALIDCMD,
   payload
@@ -65,6 +66,7 @@ export function addcmdFromApi(data) {
   let b = data.prix
   let c = data.title
   let qte = data.qte
+ // let nom = nom
 
   /******* */
 
@@ -74,7 +76,7 @@ export function addcmdFromApi(data) {
   return (dispatch) => {
     alert("ajouter au commande")
 
-    Axios.post(`http://localhost:3004/commande`, { img: a, nom_plat: c, prix: b, qte: qte }).then((res) => {
+    Axios.post(`http://localhost:3004/commande`, { img: a, nom_plat: c, prix: b, qte: qte}).then((res) => {
       dispatch(commander(data))
 
 
